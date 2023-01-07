@@ -39,3 +39,9 @@ Before we can commit we have to verify identity
 $ git config --global user.name "bhavana"
 $ git config --global user.email "bhavana27@live.com"
 ------------------------------------------- 
+TRACK CHANGES 
+
+$ git log {lists all commits from latest to old, latest on top
+$ git log --oneline
+
+
