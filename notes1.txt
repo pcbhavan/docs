@@ -1,0 +1,50 @@
+#Objects in GIT
+
+There are different types of objects in git, they are called git object types. 
+
+1.}BLOB -- Blob is a file
+2.}TREE
+3.}COMMIT
+4.}Annotated TAG
+
+#Git Low level Commands
+
+1. git hashobject
+2. git catfile
+3. git mkfile
+
+Example : $echo "hello"
+#convert this to hashvalue
+$echo "hello" | git hash-object --stdin -w  #creates hash value for the following echo command. 
+           The hash value is a alphanumeric code. the first 2 letters in hash value is the file name and the remaining letters is the file name.
+
+Hash = foldername + file name
+Hash values are created in .git repository
+We can make hashvalue  based on variables but not viceversa. This is for increased security and confidentiality. we use sha1, hashvalue in github. The sha1 code that we see in linux is in hexadecimal code, hence it will vary from the text hash value we generate online. 
+$ git cat-file -p shacode [we can see the contents]
+$ git cat-file -s shacode [size of the file]
+$ git cat-file -t shacode [type of the file-- blob, tree, etc]
+
+Example : to create a hashvalue from a file 
+
+$ vi "filename" #type content
+$ git hash-object filename -w 
+
+Object structure 
+Object type + content + length + delimiter 
+
+GIT TREE ----> When files and folders are listed in Git its called git tree objects
+
+to list all the inds of git files
+
+$ find '.git folder path' -type f you will get all objects that are saved in the .git folder that are created
+
+GIT OBJECT PERMISSIONS
+-------------------------
+ More @ https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+TO build a tree
+
+$ git mktree 
+
+
