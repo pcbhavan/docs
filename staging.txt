@@ -24,6 +24,7 @@ to check the status of files
 $ git status
 ****STAGING
 $ git add filename(s) ---> file is sent to the staging area. 
+$ git add . {to add all files to the staging area}
 
 ****UNSTAGING - to be able to make more changes
 $ git rm --cached filename(s)
@@ -37,5 +38,4 @@ Before we can commit we have to verify identity
 
 $ git config --global user.name "bhavana"
 $ git config --global user.email "bhavana27@live.com"
-
-: 
+------------------------------------------- 

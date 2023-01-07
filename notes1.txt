@@ -1,5 +1,5 @@
 #Objects in GIT
-
+------------------------------
 There are different types of objects in git, they are called git object types. 
 
 1.}BLOB -- Blob is a file
