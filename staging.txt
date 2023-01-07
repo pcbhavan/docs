@@ -1,0 +1,41 @@
+ All the operations run in folder in which got has been initialized. All the changes made are local to the folder. They are to be moved next to staging area
+
+Git repor --> staging area --> Working Directory
+
+to check if there are any files in the staging area 
+$ git ls-files -s {staging area is also called index area}
+
+TO move to a staging area
+ $ git read-tree hashvalue{4 digits are good}
+
+To move it to working directory we have to checkout
+$ git checkout-index -a 
+
+All the files that are not sent to staging area annd commited are called untracked files. 
+----------------------------------------
+##TYPES OF FILES 
+
+Untracked ---> Modified---> Staged----> Commited  
+1                             2            3
+                   4          5            6
+
+to check the status of files 
+
+$ git status
+****STAGING
+$ git add filename(s) ---> file is sent to the staging area. 
+
+****UNSTAGING - to be able to make more changes
+$ git rm --cached filename(s)
+
+------------------------------------------------
+GIT COMMIT
+
+$ git commit -m "First Commit" { give appropriate comment }
+ 
+Before we can commit we have to verify identity
+
+$ git config --global user.name "bhavana"
+$ git config --global user.email "bhavana27@live.com"
+
+: 
