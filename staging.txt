@@ -44,4 +44,18 @@ TRACK CHANGES
 $ git log {lists all commits from latest to old, latest on top
 $ git log --oneline
 
+----------------------------------------
+TO CHECK THE LASTEST COMMIT. 
+$ git show HEAD {shows latest commit hash object value, and changes made to the file, author etc} 
+$ git checkout master {to check the ...
+-------------------------------------------
+TO REMOVE A COMMITED FILE
+$ git revert {commit id, hash value} ( this reverses the action performed in the particular commit ID )
 
+------------------------------------------
+RESET 
+Three types of reset(s) :: SOft :: Hard :: Mixed
+$ git reset --mixed {hash value of the immediately preceeding commit},  {by default it will assume its a mixed reset, this option is not mandatory }
+# mixed reset unstaged the file; then we hve to do git chcekout to delete the contents of file or the changes made 
+
+$ 
