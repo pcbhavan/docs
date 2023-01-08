@@ -47,7 +47,7 @@ $ git log --oneline
 ----------------------------------------
 TO CHECK THE LASTEST COMMIT. 
 $ git show HEAD {shows latest commit hash object value, and changes made to the file, author etc} 
-$ git checkout master {to check the ...
+$ git checkout master {to check the status of out commits 
 -------------------------------------------
 TO REMOVE A COMMITED FILE
 $ git revert {commit id, hash value} ( this reverses the action performed in the particular commit ID )
@@ -56,6 +56,15 @@ $ git revert {commit id, hash value} ( this reverses the action performed in the
 RESET 
 Three types of reset(s) :: SOft :: Hard :: Mixed
 $ git reset --mixed {hash value of the immediately preceeding commit},  {by default it will assume its a mixed reset, this option is not mandatory }
-# mixed reset unstaged the file; then we hve to do git chcekout to delete the contents of file or the changes made 
+# mixed reset unstaged the file; then we hve to do "git checkout" to delete the contents of file or the changes made 
 
-$ 
+$ git reset --soft {hash value of the commit }
+$ git status { The file that has been soft reset will still be in the staging area with no changes made to the file }
+
+$ gti reset --hard {hash value }
+git status { All the commits and data is deleted and its not reversible } 
+
+
+CONNECT TO GITHUB
+--------------------------------------
+$ git remote add origin https://github.com/pcbhavan/docs.git
